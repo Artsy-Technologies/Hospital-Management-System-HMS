@@ -1,0 +1,12 @@
+{
+  "name": "hospital-management-system-hms",
+  "version": "1.0.0",
+  "description": "The Hospital Management System (HMS) is a web-based application designed to efficiently manage hospital operations, including patient records, appointments, staff management, billing, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
