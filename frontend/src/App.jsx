@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "./Login";
-import Welcome from "./Welcome";
+// import Welcome from "./Welcome";
 import "./Login.css";
 import "./index.css";
 
@@ -13,6 +13,7 @@ import NotFound from "./pages/PageNotFound";
 
 
 import { Routes, Route } from "react-router-dom";
+import AppoitmentRoutes from "./routes/AppoitmentRoutes";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
       <Route path="/login" element={<Login />} />
 
       {/* Welcome route (if applicable)*/}
-      <Route path="/welcome/*" element={<Welcome />} />
+      {/* <Route path="/welcome/*" element={<Welcome />} /> */}
 
       {/* Doctor routes*/}
       <Route path="/doctor/*" element={<DoctorRoutes />} />
@@ -34,6 +35,8 @@ function App() {
 
       {/* Patient routes*/}
       <Route path="/patient/*" element={<PatientRoutes />} />
+      {/* Appoitment */}
+      <Route path="/appoitment/*" element={<AppoitmentRoutes />} />
 
       {/* 404 - fallback*/}
       <Route path="*" element={<NotFound />} />
