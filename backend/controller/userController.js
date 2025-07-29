@@ -50,8 +50,8 @@ export const createUser = async (req, res) => {
       .status(400)
       .json({ error: "Invalid role. Allowed: doctor, staff, admin" });
 
-  
 
+  }
   try {
     // Check if username already exists
     const existingUser = await prisma.user.findUnique({ where: { username } });
@@ -76,7 +76,7 @@ export const createUser = async (req, res) => {
 export const getProfile = async (req, res) => {
   try {
     const userId = req.user.id; // make sure `req.user` exists (authentication middleware!)
-console.log("backend id",userId)
+    console.log("backend id", userId)
     if (!userId) {
       return res.status(401).json({ error: "Unauthorized" });
     }
@@ -85,10 +85,10 @@ console.log("backend id",userId)
     const user = await prisma.user.findUnique({
       where: { id: userId },
       select: {
-        
+
         username: true,
         role: true,
-        id:true,
+        id: true,
         // add other fields if needed
       },
     });
